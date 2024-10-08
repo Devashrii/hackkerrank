@@ -1,0 +1,77 @@
+# find a string
+def count_substring(string, sub_string):
+    count=0
+    for i in range(0, len(string)-len(sub_string)+1):
+        if string[i] == sub_string[0]:
+            flag=1
+            for j in range (0, len(sub_string)):
+                if string[i+j] != sub_string[j]:
+                    flag=0
+                    break
+            if flag==1:
+                count += 1
+    return count
+
+    # designer door mat 
+    N, M = map(int, input().split())
+for i in range(1, N, 2):
+    print((i * ".|.").center(M,"-"))
+print("WELCOME".center(M, "-"))
+for i in range(N-2, -1, -2):
+    print((i * ".|.").center(M, "-"))  
+
+    # alphabet rangoli
+    a = "abcdefghijklmnopqrstuvwxyz"
+def print_rangoli(size):
+    
+    lines = []
+    for row in range(size):
+        print_ = "-".join(a[row:size])
+        lines.append(print_[::-1] + print_[1:])
+    width = len(lines[0])
+    
+    for row in range(size-1, 0, -1):
+        print(lines[row].center(width, '-'))
+        
+    for row in range(size):
+        print(lines[row].center(width, '-'))
+
+        #string validator
+        if __name__ == '__main__':
+    s = input()
+
+res = False
+for i in s:
+    if i.isalnum():
+        res = True
+        break
+print(res)
+
+res = False
+for j in s:
+    if j.isalpha():
+        res = True
+        break
+print(res)
+
+res = False
+for k in s:
+    if k.isdigit():
+        res = True
+        break
+print(res)
+
+res = False
+for l in s:
+    if l.islower():
+        res = True
+        break
+print(res)
+
+res = False
+for l in s:
+    if l.isupper():
+        res = True
+        break
+print(res)
+            
